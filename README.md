@@ -1,4 +1,4 @@
-# Dataset generation for grasp detection base on point clouds
+# Dataset generation for grasp detection in point clouds
 
 This project was prepared to generate data sets for use in robotic operations.
 
