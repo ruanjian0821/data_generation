@@ -7,20 +7,15 @@ This project was prepared to generate data sets for use in robotic operations.
 
 Tested on Ubuntu 14.04 and python3.5.6.
 
-Setting up a new python environment using pyenv
-Follow instructions from here.
+Setting up a new python environment using pyenv, Follow instructions from here.
 
-Installing boost
-----------------
-Follow instructions from here.
-
-Installing blender as a module
+### Installing blender as a module
 The instructions are mostly the same as the official installation instructions except for a few modifications specified below.
 
 Install the python dependecies using pip:
 
->  pip install numpy
->  pip install requests
+> pip install numpy
+> pip install requests
   
 When blender is build as a module, the blender binary doesn't get built. So, first build blender as normal following these instructions. 
 
@@ -41,12 +36,12 @@ Make sure to build it and install it:
   
 This should have created the blender binary bin/blender. Now, build blender as a module as described in the original post (in addition to any other options):
 
-  cmake -DWITH_PLAYER=OFF -DWITH_PYTHON_INSTALL=OFF -DWITH_PYTHON_MODULE=ON ../blender
+>  cmake -DWITH_PLAYER=OFF -DWITH_PYTHON_INSTALL=OFF -DWITH_PYTHON_MODULE=ON ../blender
 
 Build it an install it:
 
-  make -j4
-  make install
+>  make -j4
+>  make install
 
 This should have created the python library bin/bpy.so.
 
@@ -61,18 +56,17 @@ Turn to https://github.com/bulletphysics/bullet3
 Make sure cmake is installed (sudo apt-get install cmake, brew install cmake, or https://cmake.org)
 In a terminal type:
 
-  ./build_cmake_pybullet_double.sh
-
-  cd build3
-  ./premake4_linux64 gmake
-  cd gmake
-  make -j8
+>  ./build_cmake_pybullet_double.sh
+> cd build3
+> ./premake4_linux64 gmake
+> cd gmake
+> make -j8
   
   Note that on Linux, you need to use cmake to build pybullet, since the compiler has issues of mixing shared and static libraries.
   
 
 ## PCL 
-http://www.pointclouds.org/
+> http://www.pointclouds.org/
 
 some useful 
-http://robotica.unileon.es/index.php/PCL/OpenNI_tutorial_5:_3D_object_recognition_(pipeline)
+> http://robotica.unileon.es/index.php/PCL/OpenNI_tutorial_5:_3D_object_recognition_(pipeline)
