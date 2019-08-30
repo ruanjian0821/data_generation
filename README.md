@@ -15,6 +15,7 @@ The instructions are mostly the same as the official installation instructions e
 Install the python dependecies using pip:
 
 > pip install numpy
+
 > pip install requests
   
 When blender is build as a module, the blender binary doesn't get built. So, first build blender as normal following these instructions. 
@@ -40,8 +41,7 @@ This should have created the blender binary bin/blender. Now, build blender as a
 
 Build it an install it:
 
->  make -j4
->  make install
+>  make -j4 &&  make install
 
 This should have created the python library bin/bpy.so.
 
@@ -57,15 +57,15 @@ Make sure cmake is installed (sudo apt-get install cmake, brew install cmake, or
 In a terminal type:
 
 >  ./build_cmake_pybullet_double.sh
-> cd build3
-> ./premake4_linux64 gmake
-> cd gmake
-> make -j8
+
+> cd build3 && ./premake4_linux64 gmake
+
+> cd gmake && make -j8
   
   Note that on Linux, you need to use cmake to build pybullet, since the compiler has issues of mixing shared and static libraries.
   
 
-## PCL 
+## 3.PCL 
 > http://www.pointclouds.org/
 
 some useful 
