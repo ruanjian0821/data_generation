@@ -4,7 +4,7 @@ This project was prepared to generate data sets for use in robotic operations.
 
 
 
-## Install blender as a module with python 3.5 and pyenv
+##1. Install blender as a module with python 3.5 and pyenv
 
 Tested on Ubuntu 14.04.
 
@@ -48,3 +48,5 @@ Build it an install it:
   make install
 
 This should have created the python library bin/bpy.so.
+
+##2. Install bullet3-2.88
