@@ -23,10 +23,9 @@ def blender_camera_coordination_definition(world_in_camera):
     print("camera in world:")
     print(camera_in_world)
     rot = camera_in_world[:3, :3]
-    # fuck blender
-    rot[:3, 0] = -rot[:3, 0]
+    # blender different zuobiaoxi
+    rot[:3, 0] = -rot[:3, 0]  
     rot[:3, 2] = -rot[:3, 2]
 
     print("quaternion: {}".format(eulerangles.mat2quat(rot)))
-
     print("postion: {}".format(camera_in_world[:3, 3]))
