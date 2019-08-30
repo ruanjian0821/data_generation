@@ -1,10 +1,10 @@
-# data_generation for 3D grasp detection
+# Dataset generation for 3D grasp detection base on point clouds
 
 This project was prepared to generate data sets for use in robotic operations.
 
 
 
-##1. Install blender as a module with python 3.5 and pyenv
+## 1. Install blender as a module with python 3.5 and pyenv
 
 Tested on Ubuntu 14.04.
 
@@ -49,4 +49,24 @@ Build it an install it:
 
 This should have created the python library bin/bpy.so.
 
-##2. Install bullet3-2.88
+## 2. Install bullet3-2.88
+Bullet Physics SDK: real-time collision detection and multi-physics simulation for VR, games, visual effects, robotics, machine learning etc.
+
+### 2.1 Turn to https://github.com/bulletphysics/bullet3, and download bullet3-2.88.zip from tags 2.88.
+
+### 2.2 install bullet3 on Linux 
+Make sure cmake is installed (sudo apt-get install cmake, brew install cmake, or https://cmake.org)
+In a terminal type:
+
+  ./build_cmake_pybullet_double.sh
+
+  cd build3
+	./premake4_linux64 gmake
+  cd gmake
+	make -j8
+  
+  Note that on Linux, you need to use cmake to build pybullet, since the compiler has issues of mixing shared and static libraries.
+  
+
+## PCL 
+http://www.pointclouds.org/
