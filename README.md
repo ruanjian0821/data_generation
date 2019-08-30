@@ -32,8 +32,7 @@ When using cmake, use the following python options (in addition to any other opt
 
 Make sure to build it and install it:
 
->  make -j4
->  make install
+>  make -j4 &&  make install
   
 This should have created the blender binary bin/blender. Now, build blender as a module as described in the original post (in addition to any other options):
 
@@ -68,5 +67,6 @@ In a terminal type:
 ## 3.PCL 
 > http://www.pointclouds.org/
 
-some useful 
+some useful webpage：
+### OpenNI tutorial 5: 3D object recognition pipeline
 > http://robotica.unileon.es/index.php/PCL/OpenNI_tutorial_5:_3D_object_recognition_(pipeline)
