@@ -1,0 +1,66 @@
+# 连接学科服务器
+
+
+## 终端输入：ssh robot@IP
+输入密码即可连接服务器，用ls查看实验室帐号里的用户，新建一个属于自己的帐号，免得混乱。	在本地的终端下，不是在服务器上。在本地的终端上才能将本地的文件拷入服务器。上传本地/home/a/code/ 目录下的所有文件到服务器目录/data/
+本地终端输入：
+scp -r /home/a/ycb_meshes_google robot@219.223.175.252:/data/code/grasp-pointnet/PointNetGPD/data  
+scp -r /home/a/code/grasp-pointnet/ robot@219.223.175.252:/data/code/grasp-pointnet/PointNetGPD/data
+scp -r /home/a/007_tuna_fish_can robot@219.223.175.252:/data/code/grasp-pointnet/PointNetGPD/data/ycb_rgbd
+/data/code/grasp-pointnet/PointNetGPD/data
+/data/code/grasp-pointnet/dex-net/src/dexnet/grasping
+scp -r   /home/a/objects/026_sponge  robot@219.223.175.252:/data/dataset/ycb_meshes_google/objects
+scp -r /home/a/objects robot@219.223.175.252:/data/dataset/ycb_meshes_google/
+[2] 新建在root/data目录下：virtualenv venv2 --no-site-packages -p /usr/bin/python
+如果基于python3就是virtualenv venv3 --no-site-packages -p /usr/bin/python3
+接着进入虚拟环境：	source venv0/bin/activate    
+python setup.py develop
+venv 是虚拟环境变量      退出虚拟环境：deactivate
+[3]下载源码之后，先改根目录啊！！
+# home_dir = os.environ['HOME']		改成：home_dir = "/data"
+而且要在dexnet/app目录下面新建generated_grasp文件夹
+scp -r /home/a/grasp-pointnet robot@219.223.175.252:/data/code/
+[4]下载服务器上的程序：本地终端输入下面指令
+scp -r robot@219.223.175.252:/data/code/grasp-pointnet/   /data/code/grasp-pointnet/
+scp -r robot@219.223.175.252:/data/code/grasp-pointnet/PointNetGPD/assets/learned_models /home/a/learned_models_190501
+scp -r robot@219.223.175.252:/data/code/grasp-pointnet/PointNetGPD/data/ycb_rgbd/026_sponge /home/a/pickle_py3
+scp -r robot@219.223.175.252:/data/code/grasp-pointnet/PointNetGPD/assets/  /home/a/download_from_FWQ /home/a/assets/log/
+/data/code/grasp-pointnet/dex-net/apps/generated_grasps/  /home/a/20190426/
+参看：https://blog.csdn.net/funnyPython/article/details/78674086?utm_source=blogxgwz9
+/data/code/grasp-pointnet/PointNetGPD/assets/learned_models/raw_main_1v/default_106.model 
+用清华Pip源下载会很快 
+pip install XXXXXX -i https://pypi.tuna.tsinghua.edu.cn/simple 
+pip install tensorboardX -i https://pypi.tuna.tsinghua.edu.cn/simple 
+pip install numpy==1.12.1 opencv-python==3.2.0.7 scipy==0.19.0 matplotlib==2.0.2 tensorflow==1.1.0 scikit-image==0.13.0 scikit-learn==0.18.1 Pillow==4.1.1 tensorflow-gpu  -i
+https://pypi.tuna.tsinghua.edu.cn/simple
+https://mirrors.aliyun.com/pypi/simple/
+scp -r /home/a/OK/ycb_grasp robot@219.223.175.252:/data/code/grasp-pointnet/PointNetGPD/data/
+
+scp -r /home/006_mustard_bottle robot@219.223.175.252:/data/code/grasp-pointnet/PointNetGPD/data/ycb_rgbd
+
+tensorboard.py --log-dir ./assets/log --port 8080
+
+/data/code/grasp-pointnet/PointNetGPD/data
+
+不要乱删除文件，在ycb_rgbd文件夹里新建clouds文件夹用来存放生成的点云数据。
+另外就是，文件的命名需要修改。
+
+scp -r /home/a/006_mustard_bottle.pickle robot@219.223.175.252:/data/code/grasp-pointnet/PointNetGPD/data/ycb_grasp/test
+
+scp -r robot@219.223.175.252:/data/code/grasp-pointnet/dex-net/apps/generated_grasps/  /home/a/OK/
+
+加载保存之后的模型开始训练：
+python3.5 main_fullv.py --epoch 200 --mode train --batch-size 13  --gpu 0 --cuda --load-model  /data/code/grasp-pointnet/PointNetGPD/assets/learned_models/main_fullv_model/default_126.model --load-epoch 126
+
+python3.5 main_fullv_mc.py --epoch 200 --mode train --batch-size 13  --gpu 3 –cuda --load-model  /data/code/grasp-pointnet/PointNetGPD/assets/learned_models/main_fullv_mc/default_7.model --load-epoch 7
+
+放服务器后台运行程序：nohup+ [执行程序的命令]+ & 
+此时所有输出都会放在nohup.out里面，查看nohup.out里面的日志，在当前目录下输入： 		    tail -fn 50 nohup.out
+查看linux上GPU的使用情况：nvidia-smi
+pc_var_score = grasp_pc[:, 1].var()
+score = refine_score +100*pc_var_score
+在/home/a/assets/log/default目录下输入：
+tensorboard  --logdir=/home/a/assets/log/default
+查看准确率：/data/code/grasp-pointnet/PointNetGPD/assets/log$ 
+tensorboard --logdir=/data/code/grasp-pointnet/PointNetGPD/assets/log
+在网页输入IP ： 219.223.175.252
