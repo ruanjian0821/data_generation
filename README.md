@@ -4,6 +4,7 @@ This project was prepared to generate data sets for use in robotic operations.
 
 
 ## 1. Install blender as a module with python 3.5 and pyenv
+------------------------------------------------------------
 
 Tested on Ubuntu 14.04 and python3.5.6.
 
@@ -45,6 +46,7 @@ Build it an install it:
 This should have created the python library bin/bpy.so.
 
 ## 2. Install bullet3-2.88
+------------------------------------------------------------
 Bullet Physics SDK: real-time collision detection and multi-physics simulation for VR, games, visual effects, robotics, machine learning etc.
 
 ### 2.1 Download bullet3-2.88.zip from tags 2.88.
@@ -65,6 +67,8 @@ In a terminal type:
   
 
 ## 3.PCL 
+------------------------------------------------------------
+official website：
 > http://www.pointclouds.org/
 
 some useful webpage：
