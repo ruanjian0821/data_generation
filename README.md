@@ -75,15 +75,7 @@ some useful webpage：
 ### OpenNI tutorial 5: 3D object recognition pipeline
 > http://robotica.unileon.es/index.php/PCL/OpenNI_tutorial_5:_3D_object_recognition_(pipeline)
 
-
-
-
-
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# Author     : Hongzhuo Liang 
-# E-mail     : liang@informatik.uni-hamburg.de
-# Description: 
+ 
 # Date       : 30/05/2018 9:57 AM 
 # File Name  : read_grasps_from_file.py
 import os
