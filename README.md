@@ -23,11 +23,12 @@ When blender is build as a module, the blender binary doesn't get built. So, fir
 
   https://github.com/sobotka/blender/blob/82e719ff8764da6c48ba3de4e5c11226953002e8/build_files/build_environment/install_deps.sh
 
-Run install_deps.sh to generate the cmake options. For example, build all libraries except for opensubdivision, opencollada and ffmpeg:
+Run install_deps.sh to generate the cmake options. 
+For example, build all libraries except for opensubdivision, opencollada and ffmpeg:
 
 > ./blender/build_files/build_environment/install_deps.sh --source ./ --threads=4 --with-all --skip-osd --skip-ffmpeg
   
-When using cmake, use the following python options (in addition to any other options returned from the command above that you need):
+When using cmake, use the following python options (in addition to any other options returned from the command above that you need, and the folder "build" and the folde "blender" should be under the same directory):
 
 >  cmake -DPYTHON_VERSION=3.5 -DPYTHON_ROOT_DIR=~/.pyenv/versions/3.5.1 ../blender
 
@@ -45,6 +46,7 @@ Build it an install it:
 
 This should have created the python library bin/bpy.so. And you cloud copy the folder 2.79 and file bpy.so to .pyenv/lib/verisions/3.5.6/site-packages/, you can import bpy under your current python environment.
 > import bpy
+
 
 
 ## 2. Install bullet3-2.88
@@ -77,9 +79,9 @@ some useful webpage：
 ### OpenNI tutorial 5: 3D object recognition pipeline
 > http://robotica.unileon.es/index.php/PCL/OpenNI_tutorial_5:_3D_object_recognition_(pipeline)
 
+
+
  
-# Date       : 30/05/2018 9:57 AM 
-# File Name  : read_grasps_from_file.py
 import os
 import sys
 import re
