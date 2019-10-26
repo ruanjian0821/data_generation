@@ -3,10 +3,10 @@
 This project was prepared to generate data sets for use in robotic operations.
 
 
-## 1. Install blender as a module with python 3.5 and pyenv
+## 1. Install blender2.79 as a module with python 3.5 and pyenv
 ------------------------------------------------------------
 
-Tested on Ubuntu 14.04 and python3.5.6.
+Tested on Ubuntu 14.04 and python3.5.6, Ubuntu16.04 also has been tested.
 
 Setting up a new python environment using pyenv, Follow instructions from here.
 
@@ -43,7 +43,9 @@ Build it an install it:
 
 >  make -j4 &&  make install
 
-This should have created the python library bin/bpy.so.
+This should have created the python library bin/bpy.so. And you cloud copy the folder 2.79 and file bpy.so to .pyenv/lib/verisions/3.5.6/site-packages/, you can import bpy under your current python environment.
+> import bpy
+
 
 ## 2. Install bullet3-2.88
 ------------------------------------------------------------
