@@ -44,7 +44,7 @@ Build it an install it:
 
 >  make -j4 &&  make install
 
-This should have created the python library bin/bpy.so. And you cloud copy the folder 2.79 and file bpy.so to .pyenv/lib/verisions/3.5.6/site-packages/, you can import bpy under your current python environment.
+This should have created the python library bin/bpy.so. And you cloud copy the folder 2.79 and file bpy.so to .pyenv/verisions/3.5.6/lib/site-packages/, you can import bpy under your current python environment.
 > import bpy
 
 
